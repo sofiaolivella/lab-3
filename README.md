@@ -117,6 +117,24 @@ Se calcula una matriz de transformación que nos permita estimar la señales ori
 Se maximiza el valor de esa matriz para asegurar una mayot independencia estadística.
 Dentro del código asumimos los dos micrófonos como el sonido1 (Juane) y el sonido2 (SofiaYA), por medio de la libreria “sklearn” aplicamos el método con la función “FastICA” y el resultado es guardado en la variable “senales_separadas”.
 
+        # Aplicar ICA
+        mezcla = np.vstack([sonido1, sonido3]).T
+        
+        ica = FastICA(n_components=2)
+        senales_separadas = ica.fit_transform(mezcla)
+        
+        # Graficar señales separadas por ICA
+        plt.figure(figsize=(15, 7))
+        for i in range(2):
+            plt.subplot(2, 1, i+1)
+            plt.plot(senales_separadas[:, i], label=f"Señal {i+1}", color=f"C{i}")
+            plt.title(f"Señal Separada {i+1} por ICA")
+            plt.xlabel("Tiempo [muestras]")
+            plt.ylabel("Amplitud")
+            plt.legend()
+        
+        plt.tight_layout()
+        plt.show()
 
 ### Beamforming
 La tecnología denominada “beamforming” es utilizada en comunicaciones inalámbricas para poder dirigir una señal en una dirección concreta evitando la dispersión de ésta en otras direcciones, un ejemplo de esto sería el wifi, de modo que en lugar de que se disperse en un espacio irá directamente al dispositivo que esté conectado, esta tecnología se basa en combinar señales capturadas por diferentes micrófonos para lograr el enfoque en una dirección específica; en el código se incrementa de la siguiente manera: 
