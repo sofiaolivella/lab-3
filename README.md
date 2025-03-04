@@ -44,6 +44,28 @@ Para poder trabajar con los audios obtenidos y grabados en el laboratorio de dis
 ![alt](AudiosNormales.png)
 
 ### SNR
+La relación entre el ruido y la señal normal es calculada por medio del siguiente código y es importante en el laboratorio ya que si el resultado nos muestra mucho más ruido que la señal, se va a dificultar bastante esa filtración de una de las voces que se escuchen. 
+
+        potJuane = np.sum(sonido1**2) / len(sonido1)
+        potSofia = np.sum(sonido3**2) / len(sonido3)
+        potRuido = np.sum(sonido2**2) / len(sonido2)
+        SNR1 = 10*np.log10(potJuane/potRuido)
+        SNR2 = 10*np.log10(potSofia/potRuido)
+        
+        print(f"Potencia de audio Juane: {potJuane:.4f}")
+        print(f"Potencia de audio sofiaYA: {potSofia:.4f}")
+        print(f"Potencia de ruido: {potRuido:.4f}")
+        
+        print(f"SNR de audio juane: {SNR1:.4f}")
+        print(f"SNR de audio sofiaYA: {SNR2:.4f}")
+        
+        #Resultados en el terminal Python
+        Potencia de audio Juane: 470273.9062
+        Potencia de audio sofiaYA: 140361.2344
+        Potencia de ruido: 6809.4594
+        SNR de audio juane: 18.3924
+        SNR de audio sofiaYA: 13.1413
+
 
 ### Transformada de Fourier
 
