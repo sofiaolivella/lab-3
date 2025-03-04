@@ -174,12 +174,26 @@ Para por último reproducir el audio que se obtiene como resultado del filtrado,
      sd.wait()
 La función “sd.play()” será la responsable de que se pueda reproducir el audio resultante después del beamforming, y el muestreo corresponde a la frecuencia del muestreo digital. 
 
+### Resultados
+Para evaluar los resultados de los dos distintos métodos utilizados a lo largo del presente laboratorio, de hace uso de la libreria "sounddevice" la cuál con las siguientes líneas de código nos permite reproducir y escuchar los resultados.
+
+        # Voces por ICA
+        for i in range(2):
+            print(f"Reproduciendo señal separada {i+1} por ICA...")
+            sd.play(senales_separadas[:, i], muestreo1)
+            sd.wait()
+            
+        # Voces por Beamforming
+        print("Reproduciendo señal filtrada por Beamforming...")
+        sd.play(beamforming_resultado, muestreo1)
+        sd.wait()
+Al escuhar las señales resultantes, podemos concluir varias cosas. En las señales dónde mejor se escuchan las voces son las obtenidas por el método ICA, que aunque se siguen escuchando ambas voces en las dos señales resultantes, si es posible diferenciar una más que la otra (aunque no tanto como se esperaba). En cambio con el método del Beamforming, realmente es como si se le hubiera agregado otra voz más robotica a la señal que no permite entender las respectivas voces. Podemos concluir que este suceso puede deberse al SNR base tan bajo obtenido con las señales sin filtrar, ya que se considera un SNR adecuado cuando ronda por los 40 decibeles.
 
 ## REQUERIMIENTOS
 - Python 3.11
 - Spyder 6.0
 - Librerias como: wfdb, matplotlib, numpy, scipy.io.wavfile, sklearn, sounddevice
-- 
+
 ## REFERENCIAS
 [1] ¿Qué es Beamforming? (2025, 4 febrero). https://www.lowi.es/glosario/beamforming/ 
 
