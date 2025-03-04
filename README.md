@@ -1,5 +1,5 @@
 # lab-3
-## DESCRIPCIÓN
+## Descripción
 
 
 ## Desarrollo
