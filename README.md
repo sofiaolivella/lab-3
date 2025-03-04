@@ -199,7 +199,7 @@ Al escuhar las señales resultantes, podemos concluir varias cosas. En las seña
 
 3) Correr el programa, esperar a que se compile por completo y si todo está en orden, se verán los resultados en el terminal de comandos de la manera que se muestra en la siguiente figura con sus respectivas gráficas y finalmente se comenzaran a reproducir los audios resultaods filtrados tanto por el método de ICA como por Beamforming.
 
-        ![alt](terminal.jpg)
+![alt](resultados.png)
 
 ## REQUERIMIENTOS
 - Python 3.11
