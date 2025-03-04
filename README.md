@@ -15,6 +15,33 @@ Primeramente para traerlos al entorno de programación de “Spyder” usamos la
     
     archivo3 = 'sofiaYA.wav';
     muestreo3, sonido3 = waves.read(archivo3)
+Para poder trabajar con los audios obtenidos y grabados en el laboratorio de diseño y simulación dentro de la universidad militar nueva granada, ya que es una sala completamente insonorizada que asegura que el ruido existente en los audios sean lo menores posible, es necesario hacerle unos ajustes especiales a los audios como asegurarse que tengan la misma duración, misma cantidad de muestras tomadas entre otras cosas. Una vez realizados los respectivos ajustes, se grafican estos datos por medio de las siguientes líneas de código.
+
+        # Graficar señales
+        plt.figure(figsize=(15, 10))
+        
+        plt.subplot(3, 1, 1)
+        plt.semilogy(np.abs(sonido1), color='red')
+        plt.title(f"{archivo1} (Semilogarítmica)")
+        plt.xlabel("Tiempo [muestras]")
+        plt.ylabel("Amplitud")
+        
+        plt.subplot(3, 1, 2)
+        plt.semilogy(np.abs(sonido2), color='green')
+        plt.title(f"{archivo2} (Semilogarítmica)")
+        plt.xlabel("Tiempo [muestras]")
+        plt.ylabel("Amplitud")
+        
+        plt.subplot(3, 1, 3)
+        plt.semilogy(np.abs(sonido3), color='blue')
+        plt.title(f"{archivo3} (Semilogarítmica)")
+        plt.xlabel("Tiempo [muestras]")
+        plt.ylabel("Amplitud")
+        
+        plt.tight_layout()
+        plt.show()
+
+![alt](AudiosNormales.png)
 
 ### SNR
 
