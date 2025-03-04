@@ -44,7 +44,8 @@ Para poder trabajar con los audios obtenidos y grabados en el laboratorio de dis
 ![alt](AudiosNormales.png)
 
 ### SNR
-La relación entre el ruido y la señal normal es calculada por medio del siguiente código y es importante en el laboratorio ya que si el resultado nos muestra mucho más ruido que la señal, se va a dificultar bastante esa filtración de una de las voces que se escuchen. 
+La relación entre el ruido y la señal normal es calculada por medio del siguiente código y es importante en el laboratorio ya que si el resultado nos muestra mucho más ruido que la señal, se va a dificultar bastante esa filtración de una de las voces que se escuchen. Para poder seguir a hacer los filtros y escuchar las voces individuales, se requiere por lo menos que los SNR sean como mínimo un 10, en caso de no pasar, tica repetir los audios. 
+
 
         potJuane = np.sum(sonido1**2) / len(sonido1)
         potSofia = np.sum(sonido3**2) / len(sonido3)
