@@ -178,13 +178,13 @@ La función “sd.play()” será la responsable de que se pueda reproducir el a
 ## REQUERIMIENTOS
 - Python 3.11
 - Spyder 6.0
-- Librerias como: wfdb, matplotlib, numpy, scipy.io.wavfile, sklearn.decomposition, sounddevice
+- Librerias como: wfdb, matplotlib, numpy, scipy.io.wavfile, sklearn, sounddevice
+- 
 ## REFERENCIAS
 [1] ¿Qué es Beamforming? (2025, 4 febrero). https://www.lowi.es/glosario/beamforming/ 
 
-[2] 
+[2] Domínguez, X. S., Socoró, J. C., Moreno, J. A. M., & Pagès, R. M. A. (2002). Aplicación de técnicas ICA temporales y espaciales para la separación y localización de fuentes. In XVII Simposium Nacional de la Unión Científica Internacional de Radio: Libro de abstracts URSI 2002, del 11 al 13 de septiembre de 2002, Universidad de Alcalá-Escuela Politécnica, Alcalá de Henares (Madrid) (pp. 45-46). Editorial Universidad de Alcalá.
 
-[3]  
 ## AUTORES
 - Juan Diego Clavijo Fuentes
   est.juan.dclavijjo@unimilitar.edu.co
