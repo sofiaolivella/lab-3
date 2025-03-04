@@ -191,6 +191,16 @@ Para evaluar los resultados de los dos distintos métodos utilizados a lo largo 
         sd.wait()
 Al escuhar las señales resultantes, podemos concluir varias cosas. En las señales dónde mejor se escuchan las voces son las obtenidas por el método ICA, que aunque se siguen escuchando ambas voces en las dos señales resultantes, si es posible diferenciar una más que la otra (aunque no tanto como se esperaba). En cambio con el método del Beamforming, realmente es como si se le hubiera agregado otra voz más robotica a la señal que no permite entender las respectivas voces. Podemos concluir que este suceso puede deberse al SNR base tan bajo obtenido con las señales sin filtrar, ya que se considera un SNR adecuado cuando ronda por los 40 decibeles.
 
+## INSTRUCCIONES 
+
+1) En primer lugar descargar o copiar y pegar el código de Python subido en este repositorio, el cuál esta guardado como "programacao.py", en el compilador que desee preferiblemente "Spyder". Cabe recalcar que debe asegurarse que se encuentren las librerias enlistadas en los requerimientos para que pueda compilarse adecuadamente el programa y muestre tanto las gráficas deseadas como los resultados de los cálculos.
+
+2) Descargar los archivos que contienen los audios de los dos microfonos y el ruido incluidos también en el presente repositorio con el nombre de “Juanealta.wav” “sofiaYA.wav” y "ruide.wav". Se aconseja que se guarden los archivos de este inciso y el anterior en la misma carpeta para su fácil acceso.
+
+3) Correr el programa, esperar a que se compile por completo y si todo está en orden, se verán los resultados en el terminal de comandos de la manera que se muestra en la siguiente figura con sus respectivas gráficas y finalmente se comenzaran a reproducir los audios resultaods filtrados tanto por el método de ICA como por Beamforming.
+
+        ![alt](terminal.jpg)
+
 ## REQUERIMIENTOS
 - Python 3.11
 - Spyder 6.0
