@@ -174,6 +174,8 @@ Para por último reproducir el audio que se obtiene como resultado del filtrado,
      sd.wait()
 La función “sd.play()” será la responsable de que se pueda reproducir el audio resultante después del beamforming, y el muestreo corresponde a la frecuencia del muestreo digital. 
 
+![alt](Beamforming.png)
+
 ### Resultados
 Para evaluar los resultados de los dos distintos métodos utilizados a lo largo del presente laboratorio, de hace uso de la libreria "sounddevice" la cuál con las siguientes líneas de código nos permite reproducir y escuchar los resultados.
 
