@@ -1,5 +1,17 @@
-# lab-
+# lab-3
+##DESCRIPCIÓN
 
+
+##Desarrollo
+###Adquicisión de los datos
+
+###SNR
+
+###Transformada de Fourier
+
+###ICA
+
+###Beamforming
 
 
 ## REQUERIMIENTOS
