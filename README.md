@@ -106,6 +106,8 @@ La función “magnitudx = np.abs(fftx)” cumple la función de extraer los val
 
 La función “plt.plot” muestra gráficamente la magnitud del espectro con respecto a la frecuencia, cumpliendo la función de visualizar qué frecuencias están presentes en la señal y demostrando su intensidad. 
 
+![alt](EnFrecuencia.png)
+
 ### ICA
 
 El método de análisis de componentes independientes o mayor conocido como ICA, es un método de procesamiento de señales que es usado para poder separar señales mezcladas desde varios puntos o micrófonos. Cabe recalcar que este es una metodología que está completamente en la estadística, surge de la idea de que las voces son estadísticamente independientes y se  busca encontrar una transformación matemática que las separe o aisle entre sí.
