@@ -108,6 +108,16 @@ La función “plt.plot” muestra gráficamente la magnitud del espectro con re
 
 ### ICA
 
+El método de análisis de componentes independientes o mayor conocido como ICA, es un método de procesamiento de señales que es usado para poder separar señales mezcladas desde varios puntos o micrófonos. Cabe recalcar que este es una metodología que está completamente en la estadística, surge de la idea de que las voces son estadísticamente independientes y se  busca encontrar una transformación matemática que las separe o aisle entre sí.
+
+Para realizar este método se realizan una serie de pasos los cuales describiremos a continuación:
+Normalizar los datos (se centra la señal en la media)
+Se asume que la mezcla de los datos está dada por una combinación lineal
+Se calcula una matriz de transformación que nos permita estimar la señales originales 
+Se maximiza el valor de esa matriz para asegurar una mayot independencia estadística.
+Dentro del código asumimos los dos micrófonos como el sonido1 (Juane) y el sonido2 (SofiaYA), por medio de la libreria “sklearn” aplicamos el método con la función “FastICA” y el resultado es guardado en la variable “senales_separadas”.
+
+
 ### Beamforming
 La tecnología denominada “beamforming” es utilizada en comunicaciones inalámbricas para poder dirigir una señal en una dirección concreta evitando la dispersión de ésta en otras direcciones, un ejemplo de esto sería el wifi, de modo que en lugar de que se disperse en un espacio irá directamente al dispositivo que esté conectado, esta tecnología se basa en combinar señales capturadas por diferentes micrófonos para lograr el enfoque en una dirección específica; en el código se incrementa de la siguiente manera: 
 
